@@ -67,6 +67,7 @@ class VectorIndexRetriever(BaseRetriever):
         self._doc_ids = doc_ids
         self._filters = filters
         self._sparse_top_k = sparse_top_k
+        self._hybrid_top_k = kwargs.get("hybrid_top_k")
         self._kwargs: Dict[str, Any] = kwargs.get("vector_store_kwargs", {})
 
         callback_manager = callback_manager or CallbackManager()
@@ -127,6 +128,7 @@ class VectorIndexRetriever(BaseRetriever):
             filters=self._filters,
             sparse_top_k=self._sparse_top_k,
             sparse_query_embedding=query_bundle_with_embeddings.sparse_embedding,
+            hybrid_top_k=self._hybrid_top_k,
         )
 
     def _build_node_list_from_query_result(

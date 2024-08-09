@@ -126,6 +126,7 @@ class VectorIndexRetriever(BaseRetriever):
             alpha=self._alpha,
             filters=self._filters,
             sparse_top_k=self._sparse_top_k,
+            sparse_query_embedding=query_bundle_with_embeddings.sparse_embedding,
         )
 
     def _build_node_list_from_query_result(

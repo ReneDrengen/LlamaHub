@@ -670,6 +670,7 @@ nav:
           - ./examples/vector_stores/postgres.ipynb
           - ./examples/vector_stores/qdrant_bm42.ipynb
           - ./examples/vector_stores/qdrant_hybrid.ipynb
+          - ./examples/vector_stores/orallamavs.ipynb
       - Workflow:
           - ./examples/workflow/.ipynb_checkpoints/human_in_the_loop_story_crafting-checkpoint.ipynb
           - ./examples/workflow/JSONalyze_query_engine.ipynb
